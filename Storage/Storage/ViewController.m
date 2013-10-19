@@ -38,6 +38,19 @@ NSMutableArray *userData;
 
 -(void)saveData
 {
+  //clear userData first!
+  [userData removeAllObjects];
+  
+  SimpleStruct * item = [[SimpleStruct alloc] init];
+  item.text = self.textField1.text;
+  item.sider = self.silder1.value;
+  [userData addObject:item];
+  
+  item = [[SimpleStruct alloc] init];
+  item.text = self.textField2.text;
+  item.sider = self.silder2.value;
+  [userData addObject:item];
+  
   NSMutableData *d = [[NSMutableData alloc] init];
   NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:d];
   [archiver encodeObject:userData forKey:@"SimpleStruct"];
@@ -78,25 +91,6 @@ NSMutableArray *userData;
 -(IBAction)closeKeyboard:(id)sender
 {
   [sender resignFirstResponder];
-}
-
-//the action of button save
--(IBAction)save
-{
-  //clear userData first!
-  [userData removeAllObjects];
-  
-  SimpleStruct * item = [[SimpleStruct alloc] init];
-  item.text = self.textField1.text;
-  item.sider = self.silder1.value;
-  [userData addObject:item];
-  
-  item = [[SimpleStruct alloc] init];
-  item.text = self.textField2.text;
-  item.sider = self.silder2.value;
-  [userData addObject:item];
-  
-  [self saveData];
 }
 
 @end

@@ -115,9 +115,9 @@
 		FBC6AE2F181267E200AC8332 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				FBC6AE38181267E200AC8332 /* AppDelegate.h */,
 				FBC6AE61181295B800AC8332 /* SimpleStruct.h */,
 				FBC6AE62181295B800AC8332 /* SimpleStruct.m */,
+				FBC6AE38181267E200AC8332 /* AppDelegate.h */,
 				FBC6AE39181267E200AC8332 /* AppDelegate.m */,
 				FBC6AE3B181267E200AC8332 /* Main.storyboard */,
 				FBC6AE3E181267E200AC8332 /* ViewController.h */,

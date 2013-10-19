@@ -16,6 +16,5 @@
 @property (weak, nonatomic) IBOutlet UISlider *silder2;
 
 -(IBAction)closeKeyboard:(id)sender;
--(IBAction)save;
-
+-(void)saveData;
 @end
