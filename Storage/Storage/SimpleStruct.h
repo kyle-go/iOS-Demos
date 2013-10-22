@@ -11,6 +11,6 @@
 @interface SimpleStruct : NSObject <NSCoding>
 
 @property (nonatomic, assign) double sider;
-@property (nonatomic, copy) NSString *text;
+@property (nonatomic, strong) NSString *text;
 
 @end
