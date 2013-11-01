@@ -21,8 +21,9 @@
 		FB629D611823EEDD00371755 /* CustomTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB629D601823EEDD00371755 /* CustomTableViewCellTests.m */; };
 		FB629D6D1823EEF200371755 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB629D6B1823EEF200371755 /* ViewController.m */; };
 		FB629D6E1823EEF200371755 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB629D6C1823EEF200371755 /* ViewController.xib */; };
-		FB629D701823F67D00371755 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB629D6F1823F67D00371755 /* CustomCell.xib */; };
-		FB629D731823F6A500371755 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB629D721823F6A500371755 /* CustomCell.m */; };
+		FB629D701823F67D00371755 /* CustomCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB629D6F1823F67D00371755 /* CustomCellController.xib */; };
+		FB629D731823F6A500371755 /* CustomCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB629D721823F6A500371755 /* CustomCellController.m */; };
+		FBDAACA41823FC6D001400D7 /* CustomCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDAACA31823FC6D001400D7 /* CustomCellData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +56,11 @@
 		FB629D6A1823EEF200371755 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB629D6B1823EEF200371755 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB629D6C1823EEF200371755 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		FB629D6F1823F67D00371755 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		FB629D711823F6A500371755 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		FB629D721823F6A500371755 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		FB629D6F1823F67D00371755 /* CustomCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellController.xib; sourceTree = "<group>"; };
+		FB629D711823F6A500371755 /* CustomCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellController.h; sourceTree = "<group>"; };
+		FB629D721823F6A500371755 /* CustomCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellController.m; sourceTree = "<group>"; };
+		FBDAACA21823FC6D001400D7 /* CustomCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellData.h; sourceTree = "<group>"; };
+		FBDAACA31823FC6D001400D7 /* CustomCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +120,8 @@
 		FB629D411823EEDD00371755 /* CustomTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FB629D741823F9C200371755 /* CustomCell */,
+				FB629D741823F9C200371755 /* CustomCellController */,
+				FBDAACA11823FC47001400D7 /* CustomCellData */,
 				FB629D4A1823EEDD00371755 /* AppDelegate.h */,
 				FB629D4B1823EEDD00371755 /* AppDelegate.m */,
 				FB629D6A1823EEF200371755 /* ViewController.h */,
@@ -158,14 +162,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FB629D741823F9C200371755 /* CustomCell */ = {
+		FB629D741823F9C200371755 /* CustomCellController */ = {
 			isa = PBXGroup;
 			children = (
-				FB629D6F1823F67D00371755 /* CustomCell.xib */,
-				FB629D711823F6A500371755 /* CustomCell.h */,
-				FB629D721823F6A500371755 /* CustomCell.m */,
+				FB629D6F1823F67D00371755 /* CustomCellController.xib */,
+				FB629D711823F6A500371755 /* CustomCellController.h */,
+				FB629D721823F6A500371755 /* CustomCellController.m */,
 			);
-			name = CustomCell;
+			name = CustomCellController;
+			sourceTree = "<group>";
+		};
+		FBDAACA11823FC47001400D7 /* CustomCellData */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAACA21823FC6D001400D7 /* CustomCellData.h */,
+				FBDAACA31823FC6D001400D7 /* CustomCellData.m */,
+			);
+			name = CustomCellData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +258,7 @@
 			files = (
 				FB629D461823EEDD00371755 /* InfoPlist.strings in Resources */,
 				FB629D6E1823EEF200371755 /* ViewController.xib in Resources */,
-				FB629D701823F67D00371755 /* CustomCell.xib in Resources */,
+				FB629D701823F67D00371755 /* CustomCellController.xib in Resources */,
 				FB629D4E1823EEDD00371755 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +280,8 @@
 			files = (
 				FB629D6D1823EEF200371755 /* ViewController.m in Sources */,
 				FB629D4C1823EEDD00371755 /* AppDelegate.m in Sources */,
-				FB629D731823F6A500371755 /* CustomCell.m in Sources */,
+				FBDAACA41823FC6D001400D7 /* CustomCellData.m in Sources */,
+				FB629D731823F6A500371755 /* CustomCellController.m in Sources */,
 				FB629D481823EEDD00371755 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +483,7 @@
 				FB629D661823EEDD00371755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB629D671823EEDD00371755 /* Build configuration list for PBXNativeTarget "CustomTableViewCellTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +492,7 @@
 				FB629D691823EEDD00371755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

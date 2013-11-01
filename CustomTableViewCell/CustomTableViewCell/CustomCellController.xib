@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="customCellIdentity" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="170" id="764-ZN-bfj" customClass="CustomCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customCellIdentity" rowHeight="170" id="764-ZN-bfj" customClass="CustomCellController">
             <rect key="frame" x="0.0" y="0.0" width="303" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="764-ZN-bfj" id="DVt-wu-Y1s">
@@ -36,6 +36,9 @@
                         <state key="normal" title="转发(7)">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="actionForward:" destination="764-ZN-bfj" eventType="touchUpInside" id="3cm-Y8-4Us"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-NQ-ToL">
                         <rect key="frame" x="120" y="139" width="47" height="30"/>
@@ -60,15 +63,12 @@
                     </textView>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="image" destination="1w6-p0-2cK" id="7rC-vc-2fQ"/>
+                <outlet property="name" destination="tMQ-ye-vAf" id="ZpO-DY-cqc"/>
+                <outlet property="sign" destination="FDs-Md-a3q" id="Myh-aI-CTu"/>
+                <outlet property="textView" destination="dgW-kb-fyO" id="IIc-fL-rH0"/>
+            </connections>
         </tableViewCell>
-        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EgD-zw-fyz">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-        </textView>
     </objects>
 </document>

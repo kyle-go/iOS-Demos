@@ -1,13 +1,13 @@
 //
-//  CustomCell.h
+//  CustomCellData.m
 //  CustomTableViewCell
 //
 //  Created by kyle on 13-11-1.
 //  Copyright (c) 2013年 kyle. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CustomCellData.h"
 
-@interface CustomCell : UITableViewCell
+@implementation CustomCellData
 
 @end
