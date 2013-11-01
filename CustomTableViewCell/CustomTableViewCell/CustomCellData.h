@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *sign;
-@property (nonatomic, strong) NSString *textView;
+@property (nonatomic, strong) NSString *weibo;
 
 @end

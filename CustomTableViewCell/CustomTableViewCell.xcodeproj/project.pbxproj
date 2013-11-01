@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2751DFE3182428F8002A076C /* UserB.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751DFDF182428F8002A076C /* UserB.png */; };
+		2751DFE4182428F8002A076C /* UserD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751DFE0182428F8002A076C /* UserD.png */; };
+		2751DFE5182428F8002A076C /* UserC.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751DFE1182428F8002A076C /* UserC.png */; };
+		2751DFE6182428F8002A076C /* UserA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751DFE2182428F8002A076C /* UserA.png */; };
 		FB629D3C1823EEDD00371755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB629D3B1823EEDD00371755 /* Foundation.framework */; };
 		FB629D3E1823EEDD00371755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB629D3D1823EEDD00371755 /* CoreGraphics.framework */; };
 		FB629D401823EEDD00371755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB629D3F1823EEDD00371755 /* UIKit.framework */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2751DFDF182428F8002A076C /* UserB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserB.png; sourceTree = "<group>"; };
+		2751DFE0182428F8002A076C /* UserD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserD.png; sourceTree = "<group>"; };
+		2751DFE1182428F8002A076C /* UserC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserC.png; sourceTree = "<group>"; };
+		2751DFE2182428F8002A076C /* UserA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserA.png; sourceTree = "<group>"; };
 		FB629D381823EEDD00371755 /* CustomTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB629D3B1823EEDD00371755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB629D3D1823EEDD00371755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2751DFDE182428DF002A076C /* UserHeaderImage */ = {
+			isa = PBXGroup;
+			children = (
+				2751DFDF182428F8002A076C /* UserB.png */,
+				2751DFE0182428F8002A076C /* UserD.png */,
+				2751DFE1182428F8002A076C /* UserC.png */,
+				2751DFE2182428F8002A076C /* UserA.png */,
+			);
+			name = UserHeaderImage;
+			sourceTree = "<group>";
+		};
 		FB629D2F1823EEDD00371755 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +141,7 @@
 			children = (
 				FB629D741823F9C200371755 /* CustomCellController */,
 				FBDAACA11823FC47001400D7 /* CustomCellData */,
+				2751DFDE182428DF002A076C /* UserHeaderImage */,
 				FB629D4A1823EEDD00371755 /* AppDelegate.h */,
 				FB629D4B1823EEDD00371755 /* AppDelegate.m */,
 				FB629D6A1823EEF200371755 /* ViewController.h */,
@@ -257,8 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB629D461823EEDD00371755 /* InfoPlist.strings in Resources */,
+				2751DFE4182428F8002A076C /* UserD.png in Resources */,
 				FB629D6E1823EEF200371755 /* ViewController.xib in Resources */,
 				FB629D701823F67D00371755 /* CustomCellController.xib in Resources */,
+				2751DFE6182428F8002A076C /* UserA.png in Resources */,
+				2751DFE3182428F8002A076C /* UserB.png in Resources */,
+				2751DFE5182428F8002A076C /* UserC.png in Resources */,
 				FB629D4E1823EEDD00371755 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

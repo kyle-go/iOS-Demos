@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *sign;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UILabel *weibo;
 
 - (IBAction)actionForward:(id)sender;
 - (void)updateViewWithCustomCellData:(CustomCellData *)cellData;

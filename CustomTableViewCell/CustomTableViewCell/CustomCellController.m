@@ -33,7 +33,7 @@
     self.image.image = [UIImage imageNamed:cellData.image];
     self.name.text = cellData.name;
     self.sign.text = cellData.sign;
-    self.textView.text = cellData.textView;
+    self.weibo.text = cellData.weibo;
 }
 
 @end
