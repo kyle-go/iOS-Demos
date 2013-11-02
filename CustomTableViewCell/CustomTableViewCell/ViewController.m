@@ -22,12 +22,8 @@
 
 - (CGFloat) getCellWeiboHeight:(NSString *)weibo
 {
-    if (!weibo) {
-        return 21;
-    }
-    
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 265, 1000)];
-    label.lineBreakMode = NSLineBreakByCharWrapping;
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 280, 1000)];
+    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     
     label.text = weibo;
@@ -36,17 +32,6 @@
     CGFloat x = label.frame.size.height;
     
     return label.frame.size.height;
-}
-
-- (UILabel *)getDynamicUILabel:(NSString *)weibo
-{
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 265, 1000)];
-    label.lineBreakMode = NSLineBreakByCharWrapping;
-    label.numberOfLines = 0;
-    
-    label.text = weibo;
-    [label sizeToFit];
-    return label;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -130,7 +115,7 @@
     [cell updateViewWithCustomCellData:[cellsData objectAtIndex:indexPath.row]];
     
     //set cell weibo's height
-    //cell.weibo = [self getDynamicUILabel:cell.weibo.text];
+    [cell.weibo sizeToFit];
     
     return cell;
 }
