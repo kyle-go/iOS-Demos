@@ -15,6 +15,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *sign;
 @property (strong, nonatomic) IBOutlet UILabel *weibo;
+@property (strong, nonatomic) IBOutlet UIButton *btnForward;
+@property (strong, nonatomic) IBOutlet UIButton *btnComment;
+@property (strong, nonatomic) IBOutlet UIButton *btnCool;
+
+@property (assign) CGFloat cellHeight;
 
 - (IBAction)actionForward:(id)sender;
 - (void)updateViewWithCustomCellData:(CustomCellData *)cellData;
