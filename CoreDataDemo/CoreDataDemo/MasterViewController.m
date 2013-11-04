@@ -42,7 +42,7 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddNewData)];
-    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(SaveData)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(DeleteLastLineData)];
     
     [self getDataFromCoreData];
 }
@@ -83,13 +83,16 @@
 
 - (void)AddNewData
 {
+    static int number = 9527;
+    static int score = 60;
+    
     BasicInfo *basic = [NSEntityDescription insertNewObjectForEntityForName:@"BasicInfo" inManagedObjectContext:self.managedObjectContext];
     basic.name = @"小喵喵";
-    basic.number = [NSNumber numberWithInt:9527];
+    basic.number = [NSNumber numberWithInt:number++];
     
     DetailInfo *detail = [NSEntityDescription insertNewObjectForEntityForName:@"DetailInfo" inManagedObjectContext:self.managedObjectContext];
     detail.detail = @"小喵喵是个好孩子！";
-    detail.score = [NSNumber numberWithInt:9527];
+    detail.score = [NSNumber numberWithInt:score++];
     
     basic.detail = detail;
     detail.from = basic;
@@ -104,9 +107,25 @@
     [self.tableView reloadData];
 }
 
-- (void)SaveData
+- (void)DeleteLastLineData
 {
-
+    NSFetchRequest *fectchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"BasicInfo" inManagedObjectContext:self.managedObjectContext];
+    [fectchRequest setEntity:entity];
+    
+    NSError *error;
+    basicInfos = [self.managedObjectContext executeFetchRequest:fectchRequest error:&error];
+    if ([basicInfos count]) {
+        BasicInfo *basic = [basicInfos objectAtIndex:[basicInfos count] - 1];
+        [self.managedObjectContext deleteObject:basic];
+        
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"error:%@",error);
+        } else {
+            [self getDataFromCoreData];
+            [self.tableView reloadData];
+        }
+    }
 }
 
 @end
