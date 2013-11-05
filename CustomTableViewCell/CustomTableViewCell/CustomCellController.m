@@ -35,7 +35,6 @@
     self.name.text = cellData.name;
     self.sign.text = cellData.sign;
     self.weibo.text = cellData.weibo;
-    self.image 
     
     //set cell weibo's height
     [self.weibo sizeToFit];
