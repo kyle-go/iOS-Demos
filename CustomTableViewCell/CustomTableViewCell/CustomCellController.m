@@ -30,10 +30,12 @@
 }
 
 - (void)updateViewWithCustomCellData:(CustomCellData *)cellData {
-    self.image.image = [UIImage imageNamed:cellData.image];
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingFormat:@"/%@.png", cellData.image];
+    self.image.image = [UIImage imageWithContentsOfFile:path];
     self.name.text = cellData.name;
     self.sign.text = cellData.sign;
     self.weibo.text = cellData.weibo;
+    self.image 
     
     //set cell weibo's height
     [self.weibo sizeToFit];
