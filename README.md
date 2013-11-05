@@ -8,10 +8,10 @@ some simple demo code
 ####2.CustomTableViewCell
 描述 自定义TableViewCell的实现。
 
-![自定义tableViewCell](https://github.com/kylescript/iOS-Demos/images/CustomTableViewCell.png)
+![自定义tableViewCell](https://raw.github.com/wangkangan/iOS-Demos/master/images/CustomTableViewCell.png)
 ####3.CoreDataDemo
 描述 CoreData的基本用法
 ####4.CustomControls
 描述一些基本控件的自定义样式，自绘等。
 
-![自定义控件](https://github.com/kylescript/iOS-Demos/images/CustomControls.png)
+![自定义控件](https://raw.github.com/wangkangan/iOS-Demos/master/images/CustomControls.png)
