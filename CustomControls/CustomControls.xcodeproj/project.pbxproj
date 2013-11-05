@@ -23,6 +23,7 @@
 		FB4EEE21182916B800D12FB4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4EEE1F182916B800D12FB4 /* MainViewController.xib */; };
 		FB4EEE241829175600D12FB4 /* KUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4EEE231829175600D12FB4 /* KUIImageView.m */; };
 		FB4EEE2818291AB500D12FB4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4EEE2718291AB500D12FB4 /* header.png */; };
+		FB4EEE2B18292B3200D12FB4 /* KUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4EEE2A18292B3200D12FB4 /* KUIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		FB4EEE221829175600D12FB4 /* KUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIImageView.h; sourceTree = "<group>"; };
 		FB4EEE231829175600D12FB4 /* KUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIImageView.m; sourceTree = "<group>"; };
 		FB4EEE2718291AB500D12FB4 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		FB4EEE2918292B3200D12FB4 /* KUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIButton.h; sourceTree = "<group>"; };
+		FB4EEE2A18292B3200D12FB4 /* KUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				FB4EEE221829175600D12FB4 /* KUIImageView.h */,
 				FB4EEE231829175600D12FB4 /* KUIImageView.m */,
+				FB4EEE2918292B3200D12FB4 /* KUIButton.h */,
+				FB4EEE2A18292B3200D12FB4 /* KUIButton.m */,
 			);
 			name = K;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4EEE241829175600D12FB4 /* KUIImageView.m in Sources */,
+				FB4EEE2B18292B3200D12FB4 /* KUIButton.m in Sources */,
 				FB4EEDFF1829164700D12FB4 /* AppDelegate.m in Sources */,
 				FB4EEE20182916B800D12FB4 /* MainViewController.m in Sources */,
 				FB4EEDFB1829164700D12FB4 /* main.m in Sources */,
@@ -477,6 +483,7 @@
 				FB4EEE191829164700D12FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB4EEE1A1829164700D12FB4 /* Build configuration list for PBXNativeTarget "CustomControlsTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +492,7 @@
 				FB4EEE1C1829164700D12FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

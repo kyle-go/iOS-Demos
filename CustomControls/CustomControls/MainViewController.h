@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "KUIImageView.h"
+#import "KUIButton.h"
 
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet KUIImageView *imageView;
+@property (weak, nonatomic) IBOutlet KUIButton *b1;
+@property (weak, nonatomic) IBOutlet KUIButton *b2;
+@property (weak, nonatomic) IBOutlet KUIButton *b3;
 
 @end
