@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27EA9220182AABD400C828CE /* CBHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA921F182AABD400C828CE /* CBHybrid.m */; };
 		FB4EEDEF1829164600D12FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4EEDEE1829164600D12FB4 /* Foundation.framework */; };
 		FB4EEDF11829164600D12FB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4EEDF01829164600D12FB4 /* CoreGraphics.framework */; };
 		FB4EEDF31829164700D12FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4EEDF21829164700D12FB4 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		FB4EEE21182916B800D12FB4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4EEE1F182916B800D12FB4 /* MainViewController.xib */; };
 		FB4EEE241829175600D12FB4 /* KUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4EEE231829175600D12FB4 /* KUIImageView.m */; };
 		FB4EEE2818291AB500D12FB4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4EEE2718291AB500D12FB4 /* header.png */; };
-		FB4EEE2B18292B3200D12FB4 /* KUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4EEE2A18292B3200D12FB4 /* KUIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27EA921E182AABD400C828CE /* CBHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHybrid.h; sourceTree = "<group>"; };
+		27EA921F182AABD400C828CE /* CBHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHybrid.m; sourceTree = "<group>"; };
 		FB4EEDEB1829164600D12FB4 /* CustomControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4EEDEE1829164600D12FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB4EEDF01829164600D12FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,8 +61,6 @@
 		FB4EEE221829175600D12FB4 /* KUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIImageView.h; sourceTree = "<group>"; };
 		FB4EEE231829175600D12FB4 /* KUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIImageView.m; sourceTree = "<group>"; };
 		FB4EEE2718291AB500D12FB4 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
-		FB4EEE2918292B3200D12FB4 /* KUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIButton.h; sourceTree = "<group>"; };
-		FB4EEE2A18292B3200D12FB4 /* KUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +167,8 @@
 			children = (
 				FB4EEE221829175600D12FB4 /* KUIImageView.h */,
 				FB4EEE231829175600D12FB4 /* KUIImageView.m */,
-				FB4EEE2918292B3200D12FB4 /* KUIButton.h */,
-				FB4EEE2A18292B3200D12FB4 /* KUIButton.m */,
+				27EA921E182AABD400C828CE /* CBHybrid.h */,
+				27EA921F182AABD400C828CE /* CBHybrid.m */,
 			);
 			name = K;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4EEE241829175600D12FB4 /* KUIImageView.m in Sources */,
-				FB4EEE2B18292B3200D12FB4 /* KUIButton.m in Sources */,
+				27EA9220182AABD400C828CE /* CBHybrid.m in Sources */,
 				FB4EEDFF1829164700D12FB4 /* AppDelegate.m in Sources */,
 				FB4EEE20182916B800D12FB4 /* MainViewController.m in Sources */,
 				FB4EEDFB1829164700D12FB4 /* main.m in Sources */,

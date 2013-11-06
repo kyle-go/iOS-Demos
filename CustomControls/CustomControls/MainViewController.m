@@ -27,12 +27,7 @@
 {
     [super viewDidLoad];
     self.imageView.image = [UIImage imageNamed:@"header"];
-    [self.b1 setType:PBFlatIconBack];
-    [self.b2 setType:PBFlatIconForward];
-    [self.b3 setType:PBFlatIconMenu];
-    self.b1.backgroundColor = [UIColor blackColor];
-    self.b2.backgroundColor = [UIColor blackColor];
-    self.b3.backgroundColor = [UIColor blackColor];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
