@@ -3,11 +3,11 @@
 @implementation CBHybrid
 
 
-// Resizable background image for normal state
-static UIImage *gBackgroundImage;
-
-// Resizable background image for highlighted state
-static UIImage *gBackgroundImageHighlighted;
+//// Resizable background image for normal state
+//static UIImage *gBackgroundImage;
+//
+//// Resizable background image for highlighted state
+//static UIImage *gBackgroundImageHighlighted;
 
 // Background image border radius and height
 static int borderRadius = 5;
@@ -32,6 +32,13 @@ static int height = 37;
 #pragma mark - Helper Methods
 
 - (void)setupBackgrounds {
+    
+    // Resizable background image for normal state
+    /*static*/ UIImage *gBackgroundImage;
+    
+    // Resizable background image for highlighted state
+    /*static*/ UIImage *gBackgroundImageHighlighted;
+
     
     // Generate background images if necessary
     if (!gBackgroundImage && !gBackgroundImageHighlighted) {
