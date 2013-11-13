@@ -47,7 +47,7 @@
     }
     
     //get cell weibo's height
-    height = weiboHeight = self.weibo.frame.size.height;
+    height = self.weibo.frame.size.height;
     
     //set button position
     CGRect oldRectForward = CGRectMake(26, 97, 47, 30);
