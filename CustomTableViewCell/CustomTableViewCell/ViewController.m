@@ -77,6 +77,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"cellForRowAtIndexPath...");
     static NSString *cellIdentify = @"customCellIdentity";
     
     //register
@@ -86,19 +87,21 @@
     });
     
     CustomCellController *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
-    if (!cell) {
-        cell = [[CustomCellController alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
-    }
     
     //set cell data.
-    [cell updateViewWithCustomCellData:[cellsData objectAtIndex:indexPath.row]];
-        
+    CustomCellData *data = [cellsData objectAtIndex:indexPath.row];
+    NSInteger height = [cell updateViewWithCustomCellData:data];
+    if (height == 0) {
+        return cell;
+    }
+    
+    data.height = height;
+    [tableView reloadData];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CustomCellController *cell = (CustomCellController*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell.cellHeight;
+    return ((CustomCellData *)[cellsData objectAtIndex:indexPath.row]).height;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

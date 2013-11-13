@@ -8,7 +8,9 @@
 
 #import "CustomCellController.h"
 
-@implementation CustomCellController
+@implementation CustomCellController {
+    NSInteger height;
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,7 +31,7 @@
 - (IBAction)actionForward:(id)sender {
 }
 
-- (void)updateViewWithCustomCellData:(CustomCellData *)cellData {
+- (NSInteger)updateViewWithCustomCellData:(CustomCellData *)cellData {
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingFormat:@"/%@.png", cellData.image];
     self.image.image = [UIImage imageWithContentsOfFile:path];
     self.name.text = cellData.name;
@@ -39,23 +41,28 @@
     //set cell weibo's height
     [self.weibo sizeToFit];
     
+    //for no reload table view;
+    if (height == self.weibo.frame.size.height) {
+        return 0;
+    }
+    
     //get cell weibo's height
-    CGFloat weiboHeight = self.weibo.frame.size.height;
-
+    height = weiboHeight = self.weibo.frame.size.height;
+    
     //set button position
     CGRect oldRectForward = CGRectMake(26, 97, 47, 30);
-    oldRectForward.origin.y += weiboHeight - 17;
+    oldRectForward.origin.y += height - 17;
     [self.btnForward setFrame:oldRectForward];
     
     CGRect oldRectComment = CGRectMake(126, 97, 47, 30);
-    oldRectComment.origin.y += weiboHeight - 17;
+    oldRectComment.origin.y += height - 17;
     [self.btnComment setFrame:oldRectComment];
     
     CGRect oldRectCool = CGRectMake(226, 97, 32, 30);
-    oldRectCool.origin.y += weiboHeight - 17;
+    oldRectCool.origin.y += height - 17;
     [self.btnCool setFrame:oldRectCool];
     
-    self.cellHeight = weiboHeight + 110;
+    return height + 110;
 }
 
 @end
