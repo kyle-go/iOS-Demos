@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2766B596183BB41C00616EA0 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 2766B595183BB41C00616EA0 /* comments.png */; };
 		27986852183A65B100D31A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27986851183A65B100D31A2C /* Foundation.framework */; };
 		27986854183A65B100D31A2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27986853183A65B100D31A2C /* CoreGraphics.framework */; };
 		27986856183A65B100D31A2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27986855183A65B100D31A2C /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2766B595183BB41C00616EA0 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
 		2798684E183A65B100D31A2C /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27986851183A65B100D31A2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27986853183A65B100D31A2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,7 @@
 				27D7EDB5183A70F600334312 /* ViewController.m */,
 				27D7EDB6183A70F600334312 /* ViewController.xib */,
 				27D7EDB9183A72B600334312 /* demo.html */,
+				2766B595183BB41C00616EA0 /* comments.png */,
 				27986863183A65B100D31A2C /* Images.xcassets */,
 				27986858183A65B100D31A2C /* Supporting Files */,
 			);
@@ -217,6 +220,7 @@
 				2798685C183A65B100D31A2C /* InfoPlist.strings in Resources */,
 				27D7EDB3183A673900334312 /* CustomTableViewCell.xib in Resources */,
 				27D7EDB8183A70F600334312 /* ViewController.xib in Resources */,
+				2766B596183BB41C00616EA0 /* comments.png in Resources */,
 				27D7EDBA183A72B600334312 /* demo.html in Resources */,
 				27986864183A65B100D31A2C /* Images.xcassets in Resources */,
 			);

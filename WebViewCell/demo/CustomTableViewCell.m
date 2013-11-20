@@ -10,6 +10,7 @@
 
 @implementation CustomTableViewCell {
     CGFloat webViewHeight;
+    UIButton *btn;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -28,18 +29,41 @@
     // Configure the view for the selected state
 }
 
+- (UIButton *)createUIButton:(CGRect)rect title:(NSString *)title
+{
+    UIButton *button = [[UIButton alloc] initWithFrame:rect];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed:@"comments.png"];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 2.0, 0.0, 0.0)];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0.0, -5.0, 0.0, 0.0)];
+    
+    button.titleLabel.font = [UIFont systemFontOfSize:10];
+    return button;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.webView sizeToFit];
     if (webViewHeight == self.webView.scrollView.contentSize.height) {
+        [btn removeFromSuperview];
+        
+        btn = [self createUIButton:CGRectMake(30, webViewHeight+65, 22+40, 22) title:@"click"];
+        [self addSubview:btn];
         return;
     }
     
     webViewHeight = self.webView.scrollView.contentSize.height;
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"freshTableView" object:nil userInfo:@{@"height": [[NSNumber alloc] initWithFloat:webViewHeight + 70], @"index": [[NSNumber alloc] initWithInt:self.index]}];
-    static int j = 0;
-    NSLog(@"jjjjjjjjjjjj = %d", ++j);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"freshTableView" object:nil userInfo:@{@"height": [[NSNumber alloc] initWithFloat:webViewHeight + 90], @"index": [[NSNumber alloc] initWithInt:self.index]}];
+}
+
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"load html failed.error=%@", error);
 }
 
 - (void)updateCell:(NSString *)data index:(NSInteger)index
@@ -58,9 +82,6 @@
     NSString *templateContent = [[NSString alloc] initWithData:tmp_data encoding:NSUTF8StringEncoding];
     NSString *html = [templateContent stringByReplacingOccurrencesOfString:@"WEIBO-BODY" withString:data];
     [self.webView loadHTMLString:html baseURL:nil];
-    
-    static int i = 0;
-    NSLog(@"iiiiiiiiiii = %d", ++i);
 }
 
 @end
