@@ -46,8 +46,14 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.webView sizeToFit];
-    if (webViewHeight == self.webView.scrollView.contentSize.height) {
+    CGRect frame = webView.frame;
+    frame.size.height = 1;
+    webView.frame = frame;
+    CGSize fittingSize = [webView sizeThatFits:CGSizeZero];
+    frame.size = fittingSize;
+    webView.frame = frame;
+    
+    if (webViewHeight == self.webView.frame.size.height) {
         [btn removeFromSuperview];
         
         btn = [self createUIButton:CGRectMake(30, webViewHeight+65, 22+40, 22) title:@"click"];
@@ -55,7 +61,7 @@
         return;
     }
     
-    webViewHeight = self.webView.scrollView.contentSize.height;
+    webViewHeight = self.webView.frame.size.height;
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"freshTableView" object:nil userInfo:@{@"height": [[NSNumber alloc] initWithFloat:webViewHeight + 90], @"index": [[NSNumber alloc] initWithInt:self.index]}];
 }
