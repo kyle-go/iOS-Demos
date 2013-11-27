@@ -48,7 +48,7 @@
         return 1;
     }
     else if(section == 1){
-        return 4;
+        return 12;
     }
 
     return 0;
@@ -85,12 +85,18 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:DetailCellIdentifier];
         }
         
+        cell.textLabel.text = @"test";
+        cell.detailTextLabel.text = @"";
+        
         if (indexPath.row == 0) {
-            cell.textLabel.text = @"地区";
-            cell.detailTextLabel.text = @"";
+            cell.textLabel.text = @"1.";
+            cell.detailTextLabel.text = @"滑动table到底部，";
         } else if(indexPath.row == 1) {
-            cell.textLabel.text = @"个性签名";
-            cell.detailTextLabel.text = @"祢妹啊～～";
+            cell.textLabel.text = @"2.";
+            cell.detailTextLabel.text = @"再滑上来发现头像的位置变了！";
+        } else if(indexPath.row == 2) {
+            cell.textLabel.text = @"3.";
+            cell.detailTextLabel.text = @"大小也变了！坑爹啊。。～～";
         } else {
             //
         }
