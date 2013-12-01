@@ -24,6 +24,7 @@
 		27F64BB9184B819A0004199F /* OLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F64BB6184B819A0004199F /* OLImage.m */; };
 		27F64BBA184B819A0004199F /* OLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F64BB8184B819A0004199F /* OLImageView.m */; };
 		27F64E27184B8A520004199F /* Emoji-Default.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27F64E26184B8A520004199F /* Emoji-Default.bundle */; };
+		27F64E2A184B97470004199F /* UICustomTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F64E29184B97470004199F /* UICustomTapGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		27F64BB7184B819A0004199F /* OLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLImageView.h; sourceTree = "<group>"; };
 		27F64BB8184B819A0004199F /* OLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImageView.m; sourceTree = "<group>"; };
 		27F64E26184B8A520004199F /* Emoji-Default.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Emoji-Default.bundle"; sourceTree = "<group>"; };
+		27F64E28184B97470004199F /* UICustomTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTapGestureRecognizer.h; sourceTree = "<group>"; };
+		27F64E29184B97470004199F /* UICustomTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTapGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				27DD78D3184A33C8003FF56E /* MainViewController.xib */,
 				27DD78D6184A345C003FF56E /* EmojiViewController.h */,
 				27DD78D7184A345C003FF56E /* EmojiViewController.m */,
+				27F64E28184B97470004199F /* UICustomTapGestureRecognizer.h */,
+				27F64E29184B97470004199F /* UICustomTapGestureRecognizer.m */,
 				27DD78D8184A345C003FF56E /* EmojiViewController.xib */,
 				27DD78B4184A33B2003FF56E /* Images.xcassets */,
 				27DD78A9184A33B2003FF56E /* Supporting Files */,
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F64E2A184B97470004199F /* UICustomTapGestureRecognizer.m in Sources */,
 				27DD78B3184A33B2003FF56E /* AppDelegate.m in Sources */,
 				27F64BBA184B819A0004199F /* OLImageView.m in Sources */,
 				27F64BB9184B819A0004199F /* OLImage.m in Sources */,

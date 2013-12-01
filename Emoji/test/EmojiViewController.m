@@ -7,6 +7,7 @@
 //
 
 #import "EmojiViewController.h"
+#import "UICustomTapGestureRecognizer.h"
 #import "OLImageView.h"
 #import "OLImage.h"
 
@@ -42,7 +43,7 @@
         imageButton.backgroundColor = [UIColor clearColor];
         imageButton.image = [OLImage imageWithMainBundleFileName:[content objectAtIndex:i]];
         
-        [view addSubview:imageButton];
+        [self addImageToView:view image:imageButton string:[content objectAtIndex:i]];
     }
     
     NSUInteger x = 6; //y = 0...6
@@ -50,16 +51,36 @@
     
     OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
     imageButton.backgroundColor = [UIColor redColor];
-    [view addSubview:imageButton];
+    
+    [self addImageToView:view image:imageButton string:@"delete-emoji"];
     
     return view;
+}
+
+- (void)addImageToView:(UIView *)view image:(UIImageView *)image string:(NSString *)string
+{
+    image.userInteractionEnabled = YES;
+    UICustomTapGestureRecognizer *singleTap = [[UICustomTapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    singleTap.customString = string;
+    [image addGestureRecognizer:singleTap];
+    [view addSubview:image];
+}
+
+
+- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer
+{
+    if ([gestureRecognizer isKindOfClass:[UICustomTapGestureRecognizer class]]) {
+        NSLog(@"click = %@", ((UICustomTapGestureRecognizer*)gestureRecognizer).customString);
+    } else {
+        NSLog(@"click = unknown");
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        //
     }
     return self;
 }
