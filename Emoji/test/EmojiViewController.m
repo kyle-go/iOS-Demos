@@ -72,6 +72,7 @@
     if ([gestureRecognizer isKindOfClass:[UICustomTapGestureRecognizer class]]) {
         NSLog(@"click = %@", ((UICustomTapGestureRecognizer*)gestureRecognizer).customString);
     } else {
+        assert(NO);
         NSLog(@"click = unknown");
     }
 }
