@@ -17,12 +17,13 @@
 		27DD78BC184A33B2003FF56E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD78BB184A33B2003FF56E /* XCTest.framework */; };
 		27DD78BD184A33B2003FF56E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD78A2184A33B2003FF56E /* Foundation.framework */; };
 		27DD78BE184A33B2003FF56E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD78A6184A33B2003FF56E /* UIKit.framework */; };
-		27DD78C6184A33B2003FF56E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DD78C4184A33B2003FF56E /* InfoPlist.strings */; };
-		27DD78C8184A33B2003FF56E /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DD78C7184A33B2003FF56E /* testTests.m */; };
 		27DD78D4184A33C8003FF56E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DD78D2184A33C8003FF56E /* MainViewController.m */; };
 		27DD78D5184A33C8003FF56E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DD78D3184A33C8003FF56E /* MainViewController.xib */; };
 		27DD78D9184A345C003FF56E /* EmojiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DD78D7184A345C003FF56E /* EmojiViewController.m */; };
 		27DD78DA184A345C003FF56E /* EmojiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DD78D8184A345C003FF56E /* EmojiViewController.xib */; };
+		27F64BB9184B819A0004199F /* OLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F64BB6184B819A0004199F /* OLImage.m */; };
+		27F64BBA184B819A0004199F /* OLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F64BB8184B819A0004199F /* OLImageView.m */; };
+		27F64E27184B8A520004199F /* Emoji-Default.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27F64E26184B8A520004199F /* Emoji-Default.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +50,17 @@
 		27DD78B4184A33B2003FF56E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27DD78BA184A33B2003FF56E /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DD78BB184A33B2003FF56E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		27DD78C3184A33B2003FF56E /* testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTests-Info.plist"; sourceTree = "<group>"; };
-		27DD78C5184A33B2003FF56E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		27DD78C7184A33B2003FF56E /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
 		27DD78D1184A33C8003FF56E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		27DD78D2184A33C8003FF56E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		27DD78D3184A33C8003FF56E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		27DD78D6184A345C003FF56E /* EmojiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiViewController.h; sourceTree = "<group>"; };
 		27DD78D7184A345C003FF56E /* EmojiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiViewController.m; sourceTree = "<group>"; };
 		27DD78D8184A345C003FF56E /* EmojiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiViewController.xib; sourceTree = "<group>"; };
+		27F64BB5184B819A0004199F /* OLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLImage.h; sourceTree = "<group>"; };
+		27F64BB6184B819A0004199F /* OLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImage.m; sourceTree = "<group>"; };
+		27F64BB7184B819A0004199F /* OLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLImageView.h; sourceTree = "<group>"; };
+		27F64BB8184B819A0004199F /* OLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImageView.m; sourceTree = "<group>"; };
+		27F64E26184B8A520004199F /* Emoji-Default.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Emoji-Default.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				27DD78A8184A33B2003FF56E /* test */,
-				27DD78C1184A33B2003FF56E /* testTests */,
 				27DD78A1184A33B2003FF56E /* Frameworks */,
 				27DD78A0184A33B2003FF56E /* Products */,
 			);
@@ -117,6 +119,8 @@
 		27DD78A8184A33B2003FF56E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				27F64E26184B8A520004199F /* Emoji-Default.bundle */,
+				27F64BB4184B819A0004199F /* OLImageView */,
 				27DD78B1184A33B2003FF56E /* AppDelegate.h */,
 				27DD78B2184A33B2003FF56E /* AppDelegate.m */,
 				27DD78D1184A33C8003FF56E /* MainViewController.h */,
@@ -142,22 +146,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		27DD78C1184A33B2003FF56E /* testTests */ = {
+		27F64BB4184B819A0004199F /* OLImageView */ = {
 			isa = PBXGroup;
 			children = (
-				27DD78C7184A33B2003FF56E /* testTests.m */,
-				27DD78C2184A33B2003FF56E /* Supporting Files */,
+				27F64BB5184B819A0004199F /* OLImage.h */,
+				27F64BB6184B819A0004199F /* OLImage.m */,
+				27F64BB7184B819A0004199F /* OLImageView.h */,
+				27F64BB8184B819A0004199F /* OLImageView.m */,
 			);
-			path = testTests;
-			sourceTree = "<group>";
-		};
-		27DD78C2184A33B2003FF56E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				27DD78C3184A33B2003FF56E /* testTests-Info.plist */,
-				27DD78C4184A33B2003FF56E /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = OLImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +234,7 @@
 			files = (
 				27DD78AD184A33B2003FF56E /* InfoPlist.strings in Resources */,
 				27DD78D5184A33C8003FF56E /* MainViewController.xib in Resources */,
+				27F64E27184B8A520004199F /* Emoji-Default.bundle in Resources */,
 				27DD78B5184A33B2003FF56E /* Images.xcassets in Resources */,
 				27DD78DA184A345C003FF56E /* EmojiViewController.xib in Resources */,
 			);
@@ -246,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DD78C6184A33B2003FF56E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DD78B3184A33B2003FF56E /* AppDelegate.m in Sources */,
+				27F64BBA184B819A0004199F /* OLImageView.m in Sources */,
+				27F64BB9184B819A0004199F /* OLImage.m in Sources */,
 				27DD78D4184A33C8003FF56E /* MainViewController.m in Sources */,
 				27DD78AF184A33B2003FF56E /* main.m in Sources */,
 				27DD78D9184A345C003FF56E /* EmojiViewController.m in Sources */,
@@ -268,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DD78C8184A33B2003FF56E /* testTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +285,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				27DD78AC184A33B2003FF56E /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		27DD78C4184A33B2003FF56E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27DD78C5184A33B2003FF56E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -461,6 +451,7 @@
 				27DD78CD184A33B2003FF56E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27DD78CE184A33B2003FF56E /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +460,7 @@
 				27DD78D0184A33B2003FF56E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

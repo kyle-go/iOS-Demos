@@ -28,12 +28,13 @@
 {
     [super viewDidLoad];
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    
+    NSArray *filesArray = [fileManager contentsOfDirectoryAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Emoji-Default.bundle"] error:&error];
+    
     EmojiViewController *controller = [[EmojiViewController alloc] init];
-    NSMutableArray *mu = [[NSMutableArray alloc] init];
-    for (int i=0; i<97; i++) {
-        [mu addObject:@"afds"];
-    }
-    controller.contentList = mu;
+    controller.contentList = filesArray;
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
     [controller didMoveToParentViewController:self];

@@ -7,6 +7,8 @@
 //
 
 #import "EmojiViewController.h"
+#import "OLImageView.h"
+#import "OLImage.h"
 
 @interface EmojiViewController ()
 
@@ -29,18 +31,26 @@
     }
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];
-    view.backgroundColor = [UIColor blackColor];
+    view.backgroundColor = [UIColor grayColor];
     NSUInteger allIndex = 0;
-    for (NSUInteger i=index; i<content.count; i++, allIndex++) {
+    for (NSUInteger i=index; i<content.count && allIndex<20; i++, allIndex++) {
+        
         NSUInteger x = allIndex%7; //y = 0...6
         NSUInteger y = allIndex/7; //x = 0 1 2
         
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 32, 32)];
-        button.backgroundColor = [UIColor redColor];
-        [button setImage:[UIImage imageNamed:[content objectAtIndex:i]] forState:UIControlStateNormal];
-        [view addSubview:button];
+        OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
+        imageButton.backgroundColor = [UIColor clearColor];
+        imageButton.image = [OLImage imageWithMainBundleFileName:[content objectAtIndex:i]];
+        
+        [view addSubview:imageButton];
     }
-    //last one
+    
+    NSUInteger x = 6; //y = 0...6
+    NSUInteger y = 2; //x = 0 1 2
+    
+    OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
+    imageButton.backgroundColor = [UIColor redColor];
+    [view addSubview:imageButton];
     
     return view;
 }
