@@ -131,9 +131,9 @@
 				27DD78D3184A33C8003FF56E /* MainViewController.xib */,
 				27DD78D6184A345C003FF56E /* EmojiViewController.h */,
 				27DD78D7184A345C003FF56E /* EmojiViewController.m */,
+				27DD78D8184A345C003FF56E /* EmojiViewController.xib */,
 				27F64E28184B97470004199F /* UICustomTapGestureRecognizer.h */,
 				27F64E29184B97470004199F /* UICustomTapGestureRecognizer.m */,
-				27DD78D8184A345C003FF56E /* EmojiViewController.xib */,
 				27DD78B4184A33B2003FF56E /* Images.xcassets */,
 				27DD78A9184A33B2003FF56E /* Supporting Files */,
 			);

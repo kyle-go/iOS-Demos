@@ -32,7 +32,7 @@
     }
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];
-    view.backgroundColor = [UIColor grayColor];
+    view.backgroundColor = [UIColor whiteColor];
     NSUInteger allIndex = 0;
     for (NSUInteger i=index; i<content.count && allIndex<20; i++, allIndex++) {
         
@@ -41,7 +41,7 @@
         
         OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
         imageButton.backgroundColor = [UIColor clearColor];
-        imageButton.image = [OLImage imageWithMainBundleFileName:[content objectAtIndex:i]];
+        imageButton.image = [OLImage imageWithContentsOfFile:[content objectAtIndex:i]];
         
         [self addImageToView:view image:imageButton string:[content objectAtIndex:i]];
     }

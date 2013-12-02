@@ -33,8 +33,14 @@
     
     NSArray *filesArray = [fileManager contentsOfDirectoryAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Emoji-Default.bundle"] error:&error];
     
+    NSMutableArray *paramArray = [[NSMutableArray alloc] init];
+    for (NSString *name in filesArray) {
+         NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingFormat:@"/Emoji-Default.bundle/%@", name];
+        [paramArray addObject:filePath];
+    }
+    
     EmojiViewController *controller = [[EmojiViewController alloc] init];
-    controller.contentList = filesArray;
+    controller.contentList = paramArray;
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
     [controller didMoveToParentViewController:self];
