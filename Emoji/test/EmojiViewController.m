@@ -32,15 +32,15 @@
     }
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor blueColor];
     NSUInteger allIndex = 0;
     for (NSUInteger i=index; i<content.count && allIndex<20; i++, allIndex++) {
         
         NSUInteger x = allIndex%7; //y = 0...6
         NSUInteger y = allIndex/7; //x = 0 1 2
         
-        OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
-        imageButton.backgroundColor = [UIColor clearColor];
+        OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 14, y*42 + 10, 36, 36)];
+        imageButton.backgroundColor = [UIColor redColor];
         imageButton.image = [OLImage imageWithContentsOfFile:[content objectAtIndex:i]];
         
         [self addImageToView:view image:imageButton string:[content objectAtIndex:i]];
@@ -49,7 +49,7 @@
     NSUInteger x = 6; //y = 0...6
     NSUInteger y = 2; //x = 0 1 2
     
-    OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 18, y*42 + 18, 22, 22)];
+    OLImageView *imageButton = [[OLImageView alloc] initWithFrame:CGRectMake(x*42 + 14, y*42 + 10, 36, 36)];
     imageButton.backgroundColor = [UIColor redColor];
     
     [self addImageToView:view image:imageButton string:@"delete-emoji"];
