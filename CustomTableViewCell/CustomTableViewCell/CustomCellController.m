@@ -32,8 +32,7 @@
 }
 
 - (NSInteger)updateViewWithCustomCellData:(CustomCellData *)cellData {
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingFormat:@"/%@.png", cellData.image];
-    self.image.image = [UIImage imageWithContentsOfFile:path];
+    self.image.image = [UIImage imageNamed:cellData.image];
     self.name.text = cellData.name;
     self.sign.text = cellData.sign;
     self.weibo.text = cellData.weibo;
