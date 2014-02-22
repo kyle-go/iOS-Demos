@@ -77,8 +77,10 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [refresh beginRefreshing];
+    
+    [self.tableView setContentOffset:CGPointMake(0, -160) animated:YES];
     [self pullToRefresh];
+    [refresh beginRefreshing];
 }
 
 #pragma mark -
@@ -101,6 +103,12 @@
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         _bottomRefresh.frame = CGRectMake(0, 44+_rowCount*RCellHeight, 320, RCellHeight);
+        
+        double delayInSeconds = 0.01;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+        });
     });
 }
 
