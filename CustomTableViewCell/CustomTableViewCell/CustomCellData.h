@@ -15,6 +15,4 @@
 @property (nonatomic, strong) NSString *sign;
 @property (nonatomic, strong) NSString *weibo;
 
-@property (nonatomic, assign) NSInteger height;
-
 @end

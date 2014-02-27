@@ -185,9 +185,9 @@
 		FB629D741823F9C200371755 /* CustomCellController */ = {
 			isa = PBXGroup;
 			children = (
-				FB629D6F1823F67D00371755 /* CustomCellController.xib */,
 				FB629D711823F6A500371755 /* CustomCellController.h */,
 				FB629D721823F6A500371755 /* CustomCellController.m */,
+				FB629D6F1823F67D00371755 /* CustomCellController.xib */,
 			);
 			name = CustomCellController;
 			sourceTree = "<group>";

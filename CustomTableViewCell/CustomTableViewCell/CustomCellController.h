@@ -19,8 +19,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnComment;
 @property (strong, nonatomic) IBOutlet UIButton *btnCool;
 
-
 - (IBAction)actionForward:(id)sender;
-- (NSInteger)updateViewWithCustomCellData:(CustomCellData *)cellData;
+- (void)updateViewWithCustomCellData:(CustomCellData *)cellData;
++ (CGFloat)getViewHeight:(CustomCellData *)cellData;
 
 @end

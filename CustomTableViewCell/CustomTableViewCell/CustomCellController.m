@@ -8,9 +8,7 @@
 
 #import "CustomCellController.h"
 
-@implementation CustomCellController {
-    NSInteger height;
-}
+@implementation CustomCellController
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,9 +27,10 @@
 }
 
 - (IBAction)actionForward:(id)sender {
+    
 }
 
-- (NSInteger)updateViewWithCustomCellData:(CustomCellData *)cellData {
+- (void)updateViewWithCustomCellData:(CustomCellData *)cellData {
     self.image.image = [UIImage imageNamed:cellData.image];
     self.name.text = cellData.name;
     self.sign.text = cellData.sign;
@@ -40,13 +39,8 @@
     //set cell weibo's height
     [self.weibo sizeToFit];
     
-    //for no reload table view;
-    if (height == self.weibo.frame.size.height) {
-        return 0;
-    }
-    
     //get cell weibo's height
-    height = self.weibo.frame.size.height;
+    CGFloat height = self.weibo.frame.size.height;
     
     //set button position
     CGRect oldRectForward = CGRectMake(26, 97, 47, 30);
@@ -60,8 +54,18 @@
     CGRect oldRectCool = CGRectMake(226, 97, 32, 30);
     oldRectCool.origin.y += height - 17;
     [self.btnCool setFrame:oldRectCool];
-    
-    return height + 110;
+}
+
++ (CGFloat)getViewHeight:(CustomCellData *)cellData
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 280, 1)];
+    label.lineBreakMode = NSLineBreakByWordWrapping;
+    label.numberOfLines = 0;
+    label.font = [UIFont systemFontOfSize:14.0];
+    label.text = cellData.weibo;
+    [label sizeToFit];
+
+    return label.frame.size.height + 110;
 }
 
 @end
